@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
+import { Link } from 'react-router-dom';
 
 export default class ExpenseForm extends React.Component {
   constructor(props) {
@@ -87,7 +88,7 @@ export default class ExpenseForm extends React.Component {
           >
           </textarea>
           <div>
-		  	<button className="button-cancel">Cancel</button>
+            <Link className="button-cancel" to="/dashboard">Cancel</Link>
             <button className="button button-right" onClick={this.SubmitForm}>Save Expense</button>
           </div>
       </div>
